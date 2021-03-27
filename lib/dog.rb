@@ -7,10 +7,6 @@ class Dog
     save
   end
   
-  def save
-    @@all << self
-  end
-  
   def self.all
     @@all
   end
@@ -21,5 +17,11 @@ class Dog
   
   def self.clear_all
     @@all.each_with_index {|dog, index| @@all.delete_at(index)}
+  end
+  
+  private
+  
+  def save
+    @@all << self
   end
 end
