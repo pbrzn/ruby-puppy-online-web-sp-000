@@ -20,6 +20,6 @@ class Dog
   end
   
   def self.clear_all
-    @@all.each_with_index {|dog, index| @@all.delete_at(index)}
+    @@all.clear
   end
 end
